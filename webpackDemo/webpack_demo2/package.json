@@ -1,0 +1,35 @@
+{
+  "name": "webpack_demo2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --progress --display-modules --colors --display-reasons --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "ejs-loader": "^0.3.0",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "image-webpack-loader": "^3.4.2",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "postcss-loader": "^2.0.8",
+    "sass": "^1.0.0-beta.2",
+    "sass-loader": "^6.0.6",
+    "scss-loader": "0.0.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.0"
+  }
+}

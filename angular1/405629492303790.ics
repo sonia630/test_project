@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:China Time
+BEGIN:STANDARD
+DTSTART:20141201T000000
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:Standard Time
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+ATTENDEE;CN="Employee";ROLE=REQ-PARTICIPANT;RSVP=TRUE:MAILTO:yuzha4@cisco.com
+ORGANIZER;CN="Taylor Zhang":MAILTO:yuzha4@cisco.com
+DTSTART;TZID="China Time":20171106T140000
+DTEND;TZID="China Time":20171106T150000
+LOCATION:https://cisco.webex.com/ciscosales-sc
+TRANSP:OPAQUE
+SEQUENCE:1
+UID:WEBEX-TRAINING CENTER-7.0303790-405629492
+DTSTAMP:20171106T060000Z
+DESCRIPTION:Employee，您好：\n\nTaylor Zhang 邀请您以 与会者 的身份参加以下在线培训课程：\n\n\n\n主题：思科员工体检总体结果健康信息分享暨新年度计划沟通会\n主持人：Taylor Zhang\n日期： 2017年11月6日\n时间：14:00，中国时间（北京，GMT+08:00）\n\n课程号：203 073 077\n课程密码：wSSSpqpw（从电话加入时使用 97777779）\n\n\n-------------------------------------------------------\n要加入培训课程\n-------------------------------------------------------\n1. 转至 https://cisco.webex.com/ciscosales-sc/k2/j.php?MTID=t6f51337facec595f447e0f7679fb4b4d\n2. 输入姓名和电子邮件地址。\n3. 输入课程密码：wSSSpqpw（从电话加入时使用 97777779）。\n4. 单击“立即加入”。\n5. 按屏幕上显示的说明操作。\n要使用其它时区或语言查看，请单击链接\nhttps://cisco.webex.com/ciscosales-sc/k2/j.php?MTID=ta95e86f44210ddd5181d63370efb54eb\n\n\n-------------------------------------------------------\n要只通过电话加入课程 \n-------------------------------------------------------\n要接收回呼，请在加入培训课程时提供您的电话号码，或拨打以下号码并输入访问码。\n收费呼入号码（美国/加拿大）:+1-408-525-6800\n全球呼入号码： https://cisco.webex.com/ciscosales-sc/globalcallin.php?serviceType=TC&ED=405629492&tollFree=0\n访问码: 203 073 077\n\n-------------------------------------------------------\n如需帮助\n-------------------------------------------------------\n您可通过以下方式联系 Taylor Zhang：\nyuzha4@cisco.com\n86-041139051197\n\nCan't join the training session?\n%JoinTrainingHelpURL%\n\n要将该课程添加到您的日历程序（例如，Microsoft Outlook）中，单击以下链接：\nhttps://cisco.webex.com/ciscosales-sc/k2/j.php?MTID=t5482f336e6dd8b4a93f87e4cc7b19bbf\n\n\n\n\nhttps://www.webex.com\n\n重要声明：该 WebEx 服务中包含可录制会话期间交换或查看的音频、任何文档以及其他资料的功能。一旦加入该会话，即表示您同意进行此类录制。如果您不同意录制，请在录制开始前向会议主持人提出顾虑或不加入会话。请注意，如果发生诉讼，这些录制文件可能会被作为证据开示。\n\n
+SUMMARY:培训课程的邀请：思科员工体检总体结果健康信息分享暨新年度计划沟通会
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= htmlWebpackPlugin.options.title %></title>
+写一个通用的 inline
+	<script type="text/javascript">
+		<%=compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substr(htmlWebpackPlugin.files.publicPath.length)].source() %>
+	</script>
+
+</head>
+<body>
+
+
+<% for(var k in htmlWebpackPlugin.files.chunks) { %>
+	<% if(k !=='main') {%>
+		<script type="text/javascript" scr='<%=htmlWebpackPlugin.files.chunks[k].entry%>'></script>
+	<% } %>
+<% } %>
+
+
+----------4444-------------------------
+
+
+	<%= htmlWebpackPlugin.options.date %>
+
+<% for(var key in htmlWebpackPlugin.files) {%>
+<div>	<%= key %>:<%= JSON.stringify(htmlWebpackPlugin.files[key])%> </div>
+<% } %>
+
+----------4444-------------------------
+<!-- I am a commont --->
+
+<% for(var key1 in htmlWebpackPlugin.options) {%>
+	<div>	<%= key1 %>:<%= JSON.stringify(htmlWebpackPlugin.options[key1])%> </div>
+<% } %>
+</body>
+</html>

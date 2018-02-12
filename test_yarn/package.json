@@ -1,0 +1,11 @@
+{
+  "name": "test_yarn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^3.10.0",
+    "wrappy": "^1.0.2",
+    "yallist": "^2.1.2"
+  }
+}

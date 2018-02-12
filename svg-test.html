@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script>
+ 
+
+function getConfig(color,size,otherOptions){
+	console.log("---------")
+	console.log(color,size,otherOptions) 
+}
+ 
+var defaultConfig = getConfig.bind(null,"#ccc","1024*786");
+ 
+ defaultConfig("123")
+
+ defaultConfig("456")
+
+
+</script>
+
+<style type="text/css">
+#mapContainer {
+position: relative;
+left:205px;
+top:0px;
+width : 790px;
+height :500px;
+overflow : auto;
+border: solid 1px Gold;
+padding : 0px;
+margin: 0px;
+}
+</style>
+
+
+</head>
+<body>
+	
+
+
+<!-- some jsp and xhtml code here -->
+
+<div id="left" style="border:2px solid gold;width:300px;height:100px; postion:relative;left:0;overflow : auto;padding:0;margin:0">
+<svg
+xmlns:svg="http://www.w3.org/2000/svg"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+version="1.0"
+width="600"
+height="200"
+id="svg2">
+
+<!-- some jsp and svg code here -->
+
+
+
+</svg>
+</div>
+
+
+
+<div id="mapContainer">
+<svg
+xmlns:svg="http://www.w3.org/2000/svg"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+version="1.0"
+width="1600"
+height="1200"
+id="svg2">
+
+<!-- some jsp and svg code here -->
+
+
+			<text x="10" y="20" class="pkt-text" >2017.08.10 18:00:48.086</text>
+
+</svg>
+</div>
+
+
+<!-- end of mapContainer -->
+ 
+
+
+
+
+	<div>  222
+		<svg  width="100%" height="100%" style="position:absolute;border:1px solid red;">
+		
+
+		 
+		<defs> 
+			<marker id="arrow" markerWidth="10" markerHeight="10" refx="0" refy="3" orient="auto" markerUnits="strokeWidth"> <path d="M0,0 L0,6 L9,3 z" fill="#f00" /> 
+		</marker> 
+		</defs> 
+
+		<line x1="95" y1="50" x2="295" y2="50" stroke="#000" stroke-width="1" marker-end="url(#arrow)" /> 
+
+		<line x1="195" y1="100" x2="395" y2="100" stroke="#000" stroke-width="1" marker-end="url(#arrow)" /> 
+
+		 
+
+ 
+
+
+
+			<text x="10" y="20" class="pkt-text" >2017.08.10 18:00:48.086</text>
+			<text x="10" y="40" class="pkt-text" >2017.08.10 18:00:48.086</text>
+			<text x="10" y="60" class="pkt-text" >2017.08.10 18:00:48.086</text>
+			<text x="10" y="80" class="pkt-text" >2017.08.10 18:00:48.086</text> 
+		</svg>
+		</div>
+
+
+<div style="position:fixed; width:200px;">
+
+		<svg width="600px" height="400px" class="example"> <defs> <marker id="arrow" markerWidth="10" markerHeight="10" refx="0" refy="3" orient="auto" markerUnits="strokeWidth" viewBox="0 0 20 20"> <path d="M0,0 L0,6 L9,3 z" fill="#f00" /> </marker> </defs> <marker id="circle" markerWidth="4" markerHeight="4" refx="2" refy="2"> <circle cx="2" cy="2" r="2" stroke="none" fill="#f00"/> </marker> <polyline points="50,100 250,100 250,200 350,200" fill="none" stroke="#000" stroke-width="10" marker-end="url(#arrow)" marker-start="url(#circle)" marker-mid="url(#circle)" /> <path d="M50,100 l0,200 l50,0" stroke="#000" fill="none" stroke-width="10" marker-end="url(#arrow)" marker-start="url(#circle)" marker-mid="url(#circle)" /> <line x1="50" y1="100" x2="220" y2="270" stroke="#000" stroke-width="10" marker-end="url(#arrow)" marker-start="url(#circle)" marker-mid="url(#circle)"/> </svg> 
+</div>
+
+<div style="border:2px solid blue; width:700px; height:400px;">
+	
+	dddddddddd
+</div>
+
+<div style="width:200px;">
+		<svg  width="50%" height="50%" style="float:left;border:1px solid red; overflow:auto;">
+		 
+			<text x="300" y="30" class="pkt-text" >2</text>
+			<text x="400" y="30" class="pkt-text" >25</text>
+
+			<text x="800" y="30" class="pkt-text" >28</text>
+
+		</svg>
+ 
+
+	</div>
+
+	<div>
+		
+	</div>
+
+
+
+<svg width="100%" height="500">
+7777
+  <marker id="arrow2" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="4" orient="auto">
+    <!--<line x1="0" y1="10" x2="10" y2="5" stroke="black" stroke-width="2" stroke-linecap="round" fill="none"/>-->
+    <path d="M 0 0 L 10 5 L 0 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </marker>
+  <marker id="interval" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="4" orient="auto">
+    <text x="02" y="2" font-family="Verdana" 
+        font-size="12" fill="tomato">3</text>
+  </marker>
+  <line x1="80" y1="80" x2="160" y2="80" stroke="red" stroke-width="4"  marker-end="url(#arrow2)" />
+  <g>
+  <rect width="100" height="100" fill="none" stroke="blue"/>
+    <text x="" y="50" fill="tomato">Hello</text>
+  </g>
+</svg>
+
+
+</body>
+</html>

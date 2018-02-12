@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="HelloAngular1">
+<head>
+	 <title>Document</title>
+</head>
+<body>
+	<div  ng-controller="HelloAngular">
+		<p>{{greeting.text}}, angular1</p>
+
+		<p ng-bind="greeting.text"> </p>
+
+
+	</div>
+
+	<hello></hello>
+
+	<input type="text" value="" ng-mode="text2" />
+	<p>双向数据绑定: {{greeting.text2}}</p>
+
+
+ 	<div ng-controller="helloController">
+		<p>{{greeting.text}}, angular1</p>
+	</div>
+
+<div ng-controller="CommonController">
+	<div ng-controller="Controller1">
+		<p> {{ greeting.text}}, angular</p>
+		<button ng-click="test1()">test1</button>
+	</div>
+
+	<div ng-controller="Controller2">
+		<p> {{ greeting.text}}, angular</p>
+		<button ng-click="test1()">test1</button>
+	</div>
+	<button ng-click="commonFn()">通用</button>
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="HelloAngular_MVC.js"></script>
+
+</html> 

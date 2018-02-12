@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+ 
+</body>
+<script>
+  
+</script>
+
+
+
+
+
+<script type="module">
+  
+
+  console.log(typeof true)
+  console.log(typeof 3.12)
+  console.log(typeof "string")
+  console.log(typeof Symbol())
+  console.log(typeof {a:1})
+  console.log(typeof [1,2,3])
+  console.log(typeof undefined)
+
+  let fname = "Liuereek"
+  let lname = "yongtao"
+  
+  console.log(`${fname} ${lname}`)
+
+  let num1 = 10
+  let num2 = 5
+  console.log(`10*5 = ${num1*num2}`)
+
+  function doMath(string,...values){
+    if(string[0] == 'Add'){
+      console.log(`${values[0]} + ${values[1]} = ${values[0] + values[1]}`)
+    }else if(string[0] == 'Sub'){
+      console.log(`${values[0]} - ${values[1]} = ${values[0] - values[1]}`)
+    }
+  }
+
+  doMath `Add${10} ${20}`
+  doMath `Sub${10} ${20}`
+
+  for(let c of fname){
+    console.log(`${c}`)
+  }
+  console.log(fname.startsWith("De"))
+  console.log(fname.startsWith("L"))
+  console.log(fname.endsWith("ek"))
+  console.log(fname.includes("ere"))
+
+  let multilineStr = `This is
+a multiline
+string`;
+
+  console.log(`${multilineStr}`)
+
+  function getSum(num1 =1,num2=1) {
+    // body...
+    console.log(`${num1}+${num2} = ${num1+num2}`)
+    console.log(`${arguments[0]}+${arguments[1]}`)
+  }
+
+  getSum(3)
+
+  function getSumMore(...vals) {
+    let sum = 0
+    for(let i=0,len = vals.length; i<len; i++){
+      sum += vals[i]
+    }
+    console.log(vals)
+    console.log(`the sum is ${sum}`)
+  }
+
+  getSumMore(1,2,3,4)
+  let vals = [1,2,3,4]
+  getSumMore(...vals)
+
+  let difference = (num1,num2) => num1 - num2
+  console.log(`5-10 = ${difference(5,10)}`)
+
+  let mult = (num1,num2) => {
+    let production = num1*num2
+    console.log(`${num1}*${num2} = ${num1*num2}`)
+  }
+
+  mult(5,10)
+
+  let valArr = [1,2,3,4,5]
+  let sumVals = valArr.reduce((a,b) => a+b)
+  console.log(`sum:${sumVals}`)
+
+  let sumVals1 = valArr.reduce((a,b) => {
+    console.log("a",a)
+    console.log("b",b)
+    return a*b
+  })
+  console.log(`sum:${sumVals1}`)
+
+  let evens = valArr.filter(v => v % 2 == 0) 
+  console.log(`Evens:${evens}`)
+   
+   let doubles = valArr.map(v => v*2)
+    console.log(doubles)
+   console.log(`doubles:${doubles}`)
+
+   function createAnimal(name,owner){
+    return {
+      name,
+      owner,
+      getInfo(){
+        return `${this.name} is owned by ${this.owner}`
+      },
+      address:{
+        street:'123 main st',
+        city:'pitter'
+      }
+    }
+   }
+
+   var spot = createAnimal("spot","doug")
+   console.log(`${spot.getInfo()}`)
+   console.log(`${spot.name} is at ${spot.address.street}`)
+   console.log(`${Object.getOwnPropertyNames(spot).join("")}`)
+   let {name, owner} = spot;
+   console.log(`Name:${name}`)
+
+   let {address} = spot
+   console.log(`address:${address.street}`)
+
+   let favNums = [2.34,3.22,63.22]
+   let[,,chaos] = favNums
+   console.log(`chaos:${chaos}`)
+
+   let[,...last2] = favNums;
+   console.log(`2nd num:${last2[0]}`)
+
+   let val1 = 1
+   let val2 = 2
+  // [val1, val2] = [val2, val1];
+   console.log(`val2:${val2}`)
+
+   class Mammal{
+    constructor(name){
+      this._name = name
+
+    }
+
+    get name(){
+      return this._name
+    }
+
+    set name(name){
+      this._name = name
+    }
+
+    static makeMammal(name){
+      return new Mammal(name)
+    }
+
+    getInfo(){
+      return `${this.name} is a mammal`
+    }
+   }
+
+   let monkey = new Mammal("Fred")
+   monkey.name = "Mark"
+   console.log(`Mammal: ${monkey.name}`)
+   console.log(`Mammal: ${monkey.getInfo()}`)
+
+
+   let cmonkey = new Mammal("chipper")
+   monkey.name = "Mark"
+   console.log(`Mammal 2 ${cmonkey.name}`)
+   console.log(`Mammal 2 ${cmonkey.getInfo()}`)
+
+   class Marsupial extends Mammal{
+    constructor(name,hasPouch){
+      super(name);
+      this._hasPouch = hasPouch
+    }
+
+    get hasPouch(){
+      return this._hasPouch
+    }
+
+    set hasPouch(hasPouch){
+      this._hasPouch = hasPouch
+    }
+    getInfo(){
+      return `${this.name} is a marsupial`
+    }
+   }
+
+   let kangaroo = new Marsupial("paul",true)
+   console.log(`It is ${kangaroo.hasPouch} that ${kangaroo.name} has a pouch`)
+   console.log(`${cmonkey.getInfo()}`)
+   console.log(`${kangaroo.getInfo()}`)
+
+  function getClass(classType){
+    if(classType == 1){
+      return Mammal
+    }else{
+      return Marsupial;
+    }
+  }
+
+  class Koala extends getClass(2){
+    constructor(name){
+      super(name)
+    }
+  }
+
+  let carl = new Koala("Carl")
+  console.log(`${carl.getInfo()}`)
+
+  // symbol
+  let capital = Symbol("State capital")
+  let pennsylvania = {}
+  pennsylvania[capital] = "Harrisburg"
+  console.log(`capital of PA:${pennsylvania[capital]}`)
+  console.log(`${capital.toString()}`)
+
+  let employNum = Symbol.for("Employee Number")
+  let bobSmith = {}
+  bobSmith[employNum] = 10
+  let sallyMarks = {}
+  sallyMarks[employNum] = 11
+  console.log(`Bob:${bobSmith[employNum]}`)
+  console.log(`Sally:${sallyMarks[employNum]}`)
+
+  //array
+  let array1 = Array.of(1,2,3);
+  let array2 = Array.from("word");
+  let array3 = Array.from(array1,(value) => value * 2)
+
+  for(let val of array1){
+    console.log(`Array1 val:${val}`)
+  }
+
+  for(let val of array2){
+    console.log(`Array2 val:${val}`)
+  }
+
+  for(let val of array3){
+    console.log(`Array2 val:${val}`)
+  }
+  console.log(`array2:${array2}`)
+
+  //set no dupulication val
+  var randSet = new Set();
+  randSet.add(10)
+  randSet.add(17)
+  randSet.add("word")
+  randSet.add("test")
+  console.log(`randSet:${randSet.toString()}`)
+  console.log(`Has 10:${randSet.has(10)}`)
+  console.log(`set size:${randSet.size}`)
+  randSet.delete(10)
+
+  for(let val of randSet){
+    console.log(`set val:${val}`)
+  }
+
+  //map key val
+  var randMap = new Map()
+  randMap.set("map1","random string")
+  randMap.set("map2",10)
+  console.log(`key1:${randMap.get("map1")}`)
+  console.log(`key2:${randMap.get("map2")}`)
+  console.log(`map size:${randMap.size}`)
+  randMap.forEach(function(value,key){
+    console.log(`${key}:${value}`)
+  })
+
+  //Promise
+  var p1 = Promise.resolve("Resolve me")
+  p1.then((res) => console.log(`${res}`))
+
+  var p2= new Promise(function(resolve,reject){
+    setTimeout(()=>resolve('resove me 2'),2000)
+  })
+
+  p2.then((res)=> console.log(`${res}`))
+
+  let randVal = 18
+  var p3 = new Promise(function (resove,reject) {
+    if(randVal == 6){
+      resolve("good")
+    }else{
+      reject("bad")
+    }
+  })
+
+  p3.then(
+    (val) =>console.log(`${val}`),
+    (err)=>console.log(`error111 ${err}`)
+  )
+
+randVal = 15
+  var p4 = new Promise((resolve,reject) => {
+    if(randVal <= 17){
+      throw new Error("can not vote")
+    }else{
+      resolve("can vote")
+    }
+  }
+)
+
+  p4.then(
+    (val)=>console.log(`${val}`)
+    ).catch(
+    (err)=>console.log(`${err.message}`)
+    )
+  //
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

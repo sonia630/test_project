@@ -1,0 +1,22 @@
+var selectedCity = vm_cityselect.$data.selectedCity ? "All" : vm_cityselect.$data.selectedCity;
+
+
+var minMax_ = function(srcObj){
+		var btnImg = $('img',srcObj);
+		var left = btnImg.position().left;
+		if(left=='-52'){//max img
+			var maxHeight = document.body.clientHeight;
+			var maxWidth = document.documentElement.clientWidth;
+
+			$('#welcomeMainHtml')[0].style = 'position:absolute; width:'+maxWidth+'px; height:'+maxHeight+'px; top: -110px; z-index: 1500; left: -65px;';
+			btnImg.css({left:'-77px'});
+		}else{
+			$('#welcomeMainHtml')[0].style = 'width: 99%;height: 84%; margin-left: 10px;';
+			btnImg.css({left:'-52px'});
+		}
+	};
+
+
+	.content-header{}
+	.home-wrapper .sidebarn{}
+
